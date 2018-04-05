@@ -129,7 +129,7 @@ func performRequest(request *http.Request) (ResponseModel, error) {
 		return responseModel, err
 	}
 
-	fmt.Println(contents)
+	fmt.Println(string(contents))
 	err = json.Unmarshal(contents, &responseModel)
 	return responseModel, err
 }
